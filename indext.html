@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <audio id="type-sound" src="key-sound.mp3" preload="auto"></audio>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <!-- <button id="dark-mode-toggle">🌙 Dark Mode</button> -->
+      
+    <h1>Typing Practice</h1>
+    <div id="text-display"></div>
+    <textarea id="text-input" placeholder="Start typing here..." autofocus></textarea>
+
+    <div class="stats">
+      <p>Time: <span id="timer">60</span>s</p>
+      <p>WPM: <span id="wpm">0</span></p>
+      <p>Accuracy: <span id="accuracy">0</span>%</p>
+    </div>
+
+    <button id="restart-btn">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+  <div id="summary-modal" class="modal">
+    <div class="modal-content">
+      <h2>Session Summary</h2>
+      <p>WPM: <span id="final-wpm"></span></p>
+      <p>Accuracy: <span id="final-accuracy"></span>%</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  
+</body>
+</html>
